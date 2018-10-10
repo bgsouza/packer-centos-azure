@@ -1,0 +1,1 @@
+rm -rf ./output-virtualbox-iso
