@@ -2,6 +2,7 @@
 Template Packer for generate custom Image to use in Azure
 
 # Dependencies
+ * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
  * [AZ-cli](https://docs.microsoft.com/pt-br/cli/azure/install-azure-cli?view=azure-cli-latest)
  * [Packer](https://www.packer.io/downloads.html)
 
