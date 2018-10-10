@@ -2,8 +2,8 @@
 Template Packer for generate custom Image to use in Azure
 
 # Dependencies
- - [AZ-cli]: https://docs.microsoft.com/pt-br/cli/azure/install-azure-cli?view=azure-cli-latest
- - [Packer]: https://www.packer.io/downloads.html
+ * [AZ-cli](https://docs.microsoft.com/pt-br/cli/azure/install-azure-cli?view=azure-cli-latest)
+ * [Packer](https://www.packer.io/downloads.html)
 
 # How Use
 
