@@ -1,9 +1,9 @@
 # packer-centos-azure
-Template Packer for generate custom Image in Azure
+Template Packer for generate custom Image to use in Azure
 
 # Dependencies
-AZ-cli
-Packer
+ - [AZ-cli]: https://docs.microsoft.com/pt-br/cli/azure/install-azure-cli?view=azure-cli-latest
+ - [Packer]: https://www.packer.io/downloads.html
 
 # How Use
 
