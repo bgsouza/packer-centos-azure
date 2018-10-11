@@ -1,5 +1,5 @@
-# packer-centos-azure
-Template Packer for generate custom Image to use in Azure
+# Packer Centos Azure
+Template Packer for generate custom Centos7 image to use in Azure
 
 Project based in [packer-alpine-azure](https://github.com/tomconte/packer-alpine-azure)
 
