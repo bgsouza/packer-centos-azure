@@ -1,0 +1,4 @@
+---
+- src: geerlingguy.nginx
+- src: https://github.com/openstack/ansible-hardening/archive/master.tar.gz
+  name: ansible-hardening

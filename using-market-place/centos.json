@@ -1,0 +1,56 @@
+{
+    "variables": {
+    },
+    "builders": [{
+      "type": "azure-arm",
+  
+      "client_id": "<your-client-id>",
+      "client_secret": "<your-client-secret>",
+      "tenant_id": "<your-tenant-id>",
+      "subscription_id": "<your-subscription-id>",
+  
+      "managed_image_resource_group_name": "<your-rg>",
+      "managed_image_name": "<name-for-output-image>",
+  
+      "os_type": "Linux",
+      "image_publisher": "OpenLogic",
+      "image_offer": "CentOS",
+      "image_sku": "7.3",
+  
+      "azure_tags": {
+          "dept": "",
+          "task": ""
+      },
+  
+      "location": "East US2",
+      "vm_size": "Standard_A2_v2"
+    }],
+    "provisioners": [
+      {
+        "type": "shell",        
+        "script": "scripts/ansible.sh"
+      },
+      {
+        "type": "ansible-local",
+        "playbook_file": "ansible/main.yml",
+        "galaxy_file": "requirements.yml"
+      },
+      {
+        "type": "shell",        
+        "script": "scripts/cleanup.sh"
+      },
+      {
+        "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'",
+        "inline": [
+          "yum update",
+          "yum upgrade -y",
+          "yum -y install nginx",
+          "yum install -y git",
+   
+          "/usr/sbin/waagent -force -deprovision+user && export HISTSIZE=0 && sync"
+        ],
+        "inline_shebang": "/bin/sh -x",
+        "type": "shell"
+      }      
+    ]
+  }
