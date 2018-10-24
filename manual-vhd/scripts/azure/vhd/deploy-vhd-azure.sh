@@ -7,6 +7,14 @@ blob=mycustomiso.vhd
 vhdurl=https://$sa.blob.core.windows.net/$container/$blob
 name=<name-temp-vm>
 
+# Verifica se a sessão está ativa
+az account show 1> /dev/null
+
+if [ $? != 0 ];
+then
+	az login
+fi
+
 # verifica se o resource group existe
 az group show --name $rg &> /dev/null
 
