@@ -1,0 +1,11 @@
+---
+- name: Harden all systems  
+  hosts: all
+  become: yes
+  gather_facts: yes
+  vars:
+    security_enable_firewalld: no
+    security_rhel7_initialize_aide: no
+  roles:
+    - ansible-hardening
+    - geerlingguy.nginx

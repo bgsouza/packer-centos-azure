@@ -2,11 +2,24 @@
   "variables": {
     "version": ""
   },
-  "provisioners": [  
+  "provisioners": [
+    {
+      "type": "shell",        
+      "script": "scripts/ansible.sh"
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "ansible/main.yml",
+      "galaxy_file": "requirements.yml"
+    }, 
     {
       "type": "shell",      
       "script": "scripts/azure/provision.sh"
     },
+    {
+      "type": "shell",        
+      "script": "scripts/cleanup.sh"
+    }, 
     {
       "type": "shell",
       "script": "scripts/azure/deprovision.sh"

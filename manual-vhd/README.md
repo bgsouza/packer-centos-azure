@@ -2,6 +2,7 @@
 Template Packer for generate custom Centos7 image to use in Azure
 
 Project based in [packer-alpine-azure](https://github.com/tomconte/packer-alpine-azure)
+Project used [ansible-hardening](https://github.com/openstack/ansible-hardening)
 
 # Dependencies
  * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
@@ -14,6 +15,3 @@ Project based in [packer-alpine-azure](https://github.com/tomconte/packer-alpine
 - $ /usr/local/packer build -var 'version=1.0' centos.json
 - $ . scripts/azure/vhd/deploy-vhd-azure.sh #to upload and create disk and VM Temp
 - $ . scripts/azure/vhd/make-image.sh # Get VM temp and convert in valid IMAGE type
-
-# Todo
-implementation of the [ansible hardening](https://github.com/openstack/ansible-hardening)
