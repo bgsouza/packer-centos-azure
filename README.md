@@ -1,5 +1,5 @@
 # Packer Centos Azure
-Template Packer for generate custom Centos7 image to use in Azure
+Template Packer for generate custom Centos7 with Hardening image to use in Azure
 
 ## Generate IMAGE
  - **manual-vhd**: Generate custom VHD based in centos7  => publish blob in storage => create image (genaralized)
