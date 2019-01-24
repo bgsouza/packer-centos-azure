@@ -26,4 +26,4 @@ Template Packer for generate custom Centos7 with Hardening image to use in Azure
 * Project used [ansible-hardening](https://github.com/openstack/ansible-hardening)
 
 ## Author
-Bruno Gomes de Souza <bruno@bgsouza.com>
+Bruno Gomes de Souza <bruno@bgsouza.com> [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/bgsouza/bgsouza)
